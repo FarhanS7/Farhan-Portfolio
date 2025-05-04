@@ -1,10 +1,14 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { ExternalLink, Github, Linkedin, Mail } from "lucide-react";
 import Image from "next/image";
-import { Github, Linkedin, Mail, ExternalLink } from "lucide-react";
 
-import { slideInFromLeft, slideInFromRight, slideInFromTop } from "@/lib/motion";
+import {
+  slideInFromLeft,
+  slideInFromRight,
+  slideInFromTop,
+} from "@/lib/motion";
 
 export const AboutSection = () => {
   return (
@@ -20,9 +24,9 @@ export const AboutSection = () => {
           className="w-full md:w-1/3 flex justify-center"
         >
           <div className="relative w-64 h-64 rounded-full overflow-hidden border-4 border-[#7042f88b] shadow-lg shadow-[#7042f861]">
-            <Image 
-              src="/api/placeholder/400/400" 
-              alt="Farhan" 
+            <Image
+              src="/api/placeholder/400/400"
+              alt="Farhan"
               layout="fill"
               objectFit="cover"
               priority
@@ -30,7 +34,7 @@ export const AboutSection = () => {
             />
           </div>
         </motion.div>
-        
+
         {/* About Text */}
         <motion.div
           variants={slideInFromRight(0.5)}
@@ -40,37 +44,45 @@ export const AboutSection = () => {
             variants={slideInFromTop}
             className="inline-flex items-center py-[8px] px-[7px] mb-4 border border-[#7042f88b] opacity-[0.9]"
           >
-            <h1 className="text-[13px] text-[#b49bff]">
-              ABOUT ME
-            </h1>
+            <h1 className="text-[13px] text-[#b49bff]">ABOUT ME</h1>
           </motion.div>
-          
+
           <h2 className="text-4xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
             Passionate Full Stack Developer
           </h2>
-          
+
           <p className="text-gray-400 mb-6 text-lg">
-            Hello! I'm a dedicated Full Stack Software Engineer with expertise in building 
-            responsive web applications, mobile solutions, and software systems. I specialize 
-            in creating seamless user experiences backed by robust architecture.
+            Hello! I am a dedicated Full Stack Software Engineer with expertise
+            in building responsive web applications, mobile solutions, and
+            software systems. I specialize in creating seamless user experiences
+            backed by robust architecture.
           </p>
-          
+
           <p className="text-gray-400 mb-8 text-lg">
-            With a strong foundation in both frontend and backend technologies, I transform 
-            innovative ideas into functional, scalable applications. I'm constantly exploring 
-            new technologies to enhance my skill set and deliver cutting-edge solutions.
+            With a strong foundation in both frontend and backend technologies,
+            I transform innovative ideas into functional, scalable applications.
+            I am constantly exploring new technologies to enhance my skill set
+            and deliver cutting-edge solutions.
           </p>
-          
+
           {/* Skills */}
           <div className="mb-8">
-            <h3 className="text-xl font-semibold text-white mb-3">Core Technologies</h3>
+            <h3 className="text-xl font-semibold text-white mb-3">
+              Core Technologies
+            </h3>
             <div className="flex flex-wrap gap-2">
               {[
-                'React', 'Next.js', 'TypeScript', 'Node.js', 
-                'Tailwind CSS', 'Framer Motion', 'Three.js', 'REST API'
+                "React",
+                "Next.js",
+                "TypeScript",
+                "Node.js",
+                "Tailwind CSS",
+                "Framer Motion",
+                "Three.js",
+                "REST API",
               ].map((skill) => (
-                <span 
-                  key={skill} 
+                <span
+                  key={skill}
                   className="px-3 py-1 bg-[rgba(112,66,248,0.2)] border border-[#7042f88b] text-[#b49bff] rounded-full text-sm font-medium"
                 >
                   {skill}
@@ -78,26 +90,41 @@ export const AboutSection = () => {
               ))}
             </div>
           </div>
-          
+
           {/* Social Links */}
-          <motion.div 
-            variants={slideInFromLeft(1)}
-            className="flex gap-4"
-          >
-            <a href="https://github.com/yourusername" target="_blank" rel="noreferrer noopener" className="text-white hover:text-[#b49bff] transition-colors">
+          <motion.div variants={slideInFromLeft(1)} className="flex gap-4">
+            <a
+              href="https://github.com/yourusername"
+              target="_blank"
+              rel="noreferrer noopener"
+              className="text-white hover:text-[#b49bff] transition-colors"
+            >
               <Github className="h-6 w-6" />
             </a>
-            <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noreferrer noopener" className="text-white hover:text-[#b49bff] transition-colors">
+            <a
+              href="https://linkedin.com/in/yourusername"
+              target="_blank"
+              rel="noreferrer noopener"
+              className="text-white hover:text-[#b49bff] transition-colors"
+            >
               <Linkedin className="h-6 w-6" />
             </a>
-            <a href="mailto:your.email@example.com" className="text-white hover:text-[#b49bff] transition-colors">
+            <a
+              href="mailto:your.email@example.com"
+              className="text-white hover:text-[#b49bff] transition-colors"
+            >
               <Mail className="h-6 w-6" />
             </a>
-            <a href="/resume.pdf" target="_blank" rel="noreferrer noopener" className="text-white hover:text-[#b49bff] transition-colors">
+            <a
+              href="/resume.pdf"
+              target="_blank"
+              rel="noreferrer noopener"
+              className="text-white hover:text-[#b49bff] transition-colors"
+            >
               <ExternalLink className="h-6 w-6" />
             </a>
           </motion.div>
-          
+
           <motion.a
             variants={slideInFromLeft(1.2)}
             href="#contact"
@@ -107,7 +134,7 @@ export const AboutSection = () => {
           </motion.a>
         </motion.div>
       </motion.div>
-      
+
       {/* Background effect for depth - similar to your other components */}
       <div className="absolute top-0 left-0 w-full h-full -z-10 opacity-30">
         <div className="absolute top-0 right-0 bg-gradient-to-bl from-purple-600/20 to-transparent w-96 h-96 rounded-full blur-3xl" />
