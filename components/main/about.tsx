@@ -50,7 +50,6 @@ export const AboutSection = () => {
           <h2 className="text-4xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
             Passionate Full Stack Developer
           </h2>
-
           <p className="text-gray-400 mb-6 text-lg">
             Hello! I am a dedicated Full Stack Software Engineer with expertise
             in building responsive web applications, mobile solutions, and
