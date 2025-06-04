@@ -27,7 +27,7 @@ export const AboutSection = () => {
         >
           <div className="relative w-64 h-64 rounded-full overflow-hidden border-4 border-[#7042f88b] shadow-lg shadow-[#7042f861]">
             <Image
-              src="/api/placeholder/400/400"
+              src="/profile.jpeg"
               alt="Farhan"
               layout="fill"
               objectFit="cover"
