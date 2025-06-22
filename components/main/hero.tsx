@@ -1,6 +1,7 @@
+// components/main/hero.tsx
 import { HeroContent } from "@/components/sub/hero-content";
 
-export const Hero = () => {
+const Hero = () => {
   return (
     <div className="relative flex flex-col h-full w-full">
       <video
@@ -11,8 +12,9 @@ export const Hero = () => {
       >
         <source src="/videos/blackhole.webm" type="video/webm" />
       </video>
-
       <HeroContent />
     </div>
   );
 };
+
+export default Hero;
