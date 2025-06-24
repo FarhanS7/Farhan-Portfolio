@@ -39,7 +39,9 @@ const Projects = dynamic(() => import("@/components/main/projects"), {
 });
 
 // You can also add JourneySection lazily later if needed
-// const JourneySection = dynamic(() => import('@/components/main/journey'), { loading: ... })
+const JourneySection = dynamic(() => import("@/components/main/journey"), {
+  loading: () => <div className="h-screen animate-pulse bg-gray-800/20" />,
+});
 
 export default function Home() {
   return (
@@ -47,10 +49,11 @@ export default function Home() {
       <div className="flex flex-col gap-20">
         <Hero />
         <AboutSection />
+        <JourneySection />
         <SkillsSection />
-        {/* <JourneySection /> */}
-        <Encryption />
+
         <Projects />
+        <Encryption />
       </div>
     </main>
   );
