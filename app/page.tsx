@@ -19,6 +19,7 @@
 //   );
 // }
 
+import ContactSection from "@/components/main/ContactSection";
 import dynamic from "next/dynamic";
 
 // Lazy load components with fallback loading UI
@@ -53,6 +54,7 @@ export default function Home() {
         <SkillsSection />
 
         <Projects />
+        <ContactSection />
         <Encryption />
       </div>
     </main>
