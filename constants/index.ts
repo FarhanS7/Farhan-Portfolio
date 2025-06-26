@@ -382,38 +382,63 @@ export const skills: Skill[] = [
 
 export const PROJECTS = [
   {
-    title: "Modern Next.js 14 Portfolio",
+    title: "Automind AI – AI-Powered Car Marketplace",
     description:
-      'Embark on a journey through my professional evolution with the "Modern Next.js Portfolio" – a dynamic showcase of my skills, experiences, and passion for web development.',
+      "A full-stack car marketplace that uses AI to search for cars based on images, providing a seamless user experience with real-time data operations.",
     image: "/projects/project-1.png",
-    link: "https://example.com",
-    github: "https://github.com/yourname/portfolio", // ✅ required
-    tags: ["Next.js", "TypeScript", "Tailwind CSS"], // ✅ required
+    link: "https://automind-ai.vercel.app/",
+    github: "https://github.com/FarhanS7/auto-mind", // ✅ required
+    tags: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Prisma",
+      "Supabase",
+      "Clerk",
+      "Arcjet",
+    ], // ✅ required
     features: [
-      "Dynamic routing with Next.js",
-      "Responsive design with Tailwind CSS",
-      "Interactive animations using Framer Motion",
+      "AI-powered car search via image upload with 90%+ accuracy",
+      "Test drive booking and scheduling interface",
+      "Admin panel for car listing management (manual and image-based input)",
+      "User authentication using Clerk",
+      "Real-time database interactions with Supabase and Prisma",
+      "Performance optimization using Arcjet edge protection and caching",
+      "Responsive UI with modern UX design",
     ],
+    category: "fullstack",
   },
   {
-    title: "Interactive Cards Portfolio",
+    title: "Kinetic Ai – Career Development Platform",
     description:
-      "A sleek UI project using modern card interaction design patterns.",
+      "A comprehensive AI-driven platform for career development, offering resume generation, mock interviews, and personalized career insights.",
     image: "/projects/project-2.png",
-    link: "https://example.com/cards",
-    github: "https://github.com/yourname/cards",
-    tags: ["React", "Framer Motion", "Styled Components"],
-    features: [
-      "Smooth animations with Framer Motion",
-      "Responsive design for all devices",
-      "Interactive card flipping effect",
+    link: "https://kineticai.vercel.app/",
+    github: "https://github.com/FarhanS7/KINETICAI",
+    tags: [
+      "Next.js",
+      "Styled Components",
+      "Clerk",
+      "NeonDB",
+      "Prisma",
+      "Inngest",
     ],
+    features: [
+      "AI-driven resume and cover letter generation based on user profile",
+      "Mock interview system powered by conversational AI flows",
+      "Industry insights and personalized career suggestions",
+      "Secure user login and profile management with Clerk",
+      "Scalable backend architecture using NeonDB and Prisma",
+      "Responsive and accessible interface with contextual coaching modules",
+      "Conversational UI design for enhanced user engagement",
+    ],
+    category: "fullstack",
   },
   {
-    title: "Space Themed Website",
+    title: "Space Themed Portfolio",
     description: "A themed site exploring animation and layout techniques.",
     image: "/projects/project-3.png",
-    link: "https://example.com/space",
+    link: "https://farhan-shahriar.vercel.app/",
     github: "https://github.com/yourname/space",
     tags: ["HTML", "CSS", "JavaScript"],
     features: [
@@ -421,6 +446,32 @@ export const PROJECTS = [
       "Responsive design for all devices",
       "Interactive space-themed animations",
     ],
+    category: "fullstack",
+  },
+  {
+    title: "CZS SUPER CUP - Football Tournament Management",
+    description:
+      "A full-stack tournament registration platform for managing football tournaments, including player and team registrations, admin dashboard, and performance optimizations.",
+    image: "/projects/project-4.png",
+    link: "https://www.czssupercup.com/",
+    // github: "https://github.com/yourname/space",
+    tags: [
+      "Nextjs",
+      "MongoDB",
+      "Cloudeinary",
+      "Nodejs",
+      "Expressjs",
+      "Frontend",
+    ],
+    features: [
+      "Designed and implemented a full-stack tournament registration platform using React.js and Next.js",
+      "Enabled 500+ player registrations and 100+ team submissions with validation for up to 18 players per team",
+      "Built admin dashboard for real-time user and team approval using Redux/Context API",
+      "Optimized image handling with WebP format, improving page load time by 35%",
+      "Boosted performance scores via Lighthouse by streamlining frontend delivery",
+      "Ensured responsive, accessible UI compliant with WCAG standards",
+    ],
+    category: "fullstack",
   },
 ];
 

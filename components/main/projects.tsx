@@ -6,14 +6,12 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import ProjectCard from "../sub/project-card";
 
-// Define project categories
+// Define project categories (only fullstack, backend, frontend + all)
 const PROJECT_CATEGORIES = [
   { label: "All", value: "all", icon: "🚀" },
   { label: "Frontend", value: "frontend", icon: "🎨" },
   { label: "Backend", value: "backend", icon: "⚙️" },
   { label: "Fullstack", value: "fullstack", icon: "🌐" },
-  { label: "Mobile", value: "mobile", icon: "📱" },
-  { label: "Other", value: "other", icon: "🛠️" },
 ];
 
 const containerVariants = {
@@ -39,80 +37,10 @@ const filterVariants = {
 export const Projects = () => {
   const [activeCategory, setActiveCategory] = useState("all");
 
-  // Filter projects based on active category using tags
+  // Updated filter: use explicit project.category property
   const filteredProjects = PROJECTS.filter((project) => {
     if (activeCategory === "all") return true;
-
-    // Check if any tag matches the category
-    return project.tags?.some((tag) => {
-      const tagLower = tag.toLowerCase();
-
-      // Direct category matches
-      if (activeCategory === "frontend") {
-        return (
-          tagLower.includes("react") ||
-          tagLower.includes("vue") ||
-          tagLower.includes("angular") ||
-          tagLower.includes("html") ||
-          tagLower.includes("css") ||
-          tagLower.includes("javascript") ||
-          tagLower.includes("typescript") ||
-          tagLower.includes("frontend")
-        );
-      }
-
-      if (activeCategory === "backend") {
-        return (
-          tagLower.includes("node") ||
-          tagLower.includes("express") ||
-          tagLower.includes("python") ||
-          tagLower.includes("django") ||
-          tagLower.includes("flask") ||
-          tagLower.includes("php") ||
-          tagLower.includes("laravel") ||
-          tagLower.includes("backend") ||
-          tagLower.includes("api") ||
-          tagLower.includes("server")
-        );
-      }
-
-      if (activeCategory === "fullstack") {
-        return (
-          tagLower.includes("fullstack") ||
-          tagLower.includes("full-stack") ||
-          tagLower.includes("mern") ||
-          tagLower.includes("mean") ||
-          tagLower.includes("django") ||
-          tagLower.includes("laravel")
-        );
-      }
-
-      if (activeCategory === "mobile") {
-        return (
-          tagLower.includes("react native") ||
-          tagLower.includes("flutter") ||
-          tagLower.includes("mobile") ||
-          tagLower.includes("android") ||
-          tagLower.includes("ios") ||
-          tagLower.includes("app")
-        );
-      }
-
-      if (activeCategory === "other") {
-        return (
-          !tagLower.includes("react") &&
-          !tagLower.includes("vue") &&
-          !tagLower.includes("node") &&
-          !tagLower.includes("python") &&
-          !tagLower.includes("mobile") &&
-          !tagLower.includes("frontend") &&
-          !tagLower.includes("backend") &&
-          !tagLower.includes("fullstack")
-        );
-      }
-
-      return false;
-    });
+    return project.category === activeCategory;
   });
 
   return (
